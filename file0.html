@@ -8,8 +8,6 @@
 	  <br/>
 		<font size="1dp"><i>
 		<div id="err" style="background:#c8f5c8;text-align:center;padding:3px;color:red; border-radius:4px;font-weight:200;"><font color="green">masukkan data dengan benar</font></div><br/></i></font>
-	  
-		<label id="label" for="nama"> nama</label><br/><input type="text" id="nama"/><br/><br/>
 		<label id="label" for="nisn"> nisn</label><br/>
 		<input type="number" id="nisn"/><br/>
 	  <br/></font>
@@ -30,7 +28,7 @@
 		background:#32b5e3;
 		color:white;
 		padding:4px;
-        border:none;
+      		border:none;
 		vertical-align:center;
 		margin-bottom:3px;
 		text-align:center;
@@ -43,67 +41,11 @@ background: #c8f5c8;
 border-radius:7px;
 "></font></font>
 	<font size="2dp">
-	<center><div id="bara" style="background:none; padding:5px margin-bottom:0px;">
-	  <font color="#32b5e3" style="font-weight:700;">nomor</font><input type="button" id="tbl" onclick="tampildaftar()"/>
-	  </div>
-		<div id="daf"></div></center>
-		  <div style="margin-left:5px;"><div>
-		  <font id="uk1" color="#ddd" size="1dp" onclick="ukuran(1);">A</font>
-		  <font id="uk2" color="#32b5e3" size="2dp" onclick="ukuran(2);">A</font>
-		  <font id="uk3" color="#ddd" size="3dp" onclick="ukuran(3);">A</font>
-		</div>
-		 <font id="uk" size="2dp"> 
-	  <div id="soal"></div>
-	  <div id="question" style="
-background:blue;
-width:100%;
-white-space:nowrap;
-overflow:auto;
-"></div>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDSPS60Qnro-KtoXuBfoWJGP3LsRwP5yNTaJeFTT2Ebnn6rA/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
-	  <div id="pilihan">
-		<input type="radio" name="pilgan" value="A" id="pilgana" class="pi" onclick="tampungjwb('a')"><label for="pilgana"><span><span></span></span>A.<ques id="pilgan0" disabled=true></ques></label><br/>
-		<input type="radio" name="pilgan" value="B" id="pilganb" class="pi" onclick="tampungjwb('b')"><label for="pilganb"><span><span></span></span>B.<ques id="pilgan1" disabled=true></ques></label><br/>
-		  <input type="radio" name="pilgan" value="C" id="pilganc" class="pi" onclick="tampungjwb('c')"><label for="pilganc"><span><span></span></span>C.<ques id="pilgan2" disabled=true></ques></label><br/>
-		  <input type="radio" name="pilgan" value="D" id="pilgand" class="pi" onclick="tampungjwb('d')"><label for="pilgand"><span><span></span></span>D.<ques id="pilgan3" disabled=true</ques></label><br/>
-
-	  </div></font>
+	<center><div id="bara" style="background:none; padding:5px margin-bottom:0px;">		 
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDSPS60Qnro-KtoXuBfoWJGP3LsRwP5yNTaJeFTT2Ebnn6rA/viewform?embedded=true" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
 	  <center>
-		<div id="opt" style="
-		  background-color:none;
-		  margin:5px;
-		  padding=5px;"></div></center>
-	  <br/>
-		  </div>
   </div>
 
-
-  <font size="1dp" color="gray">
-	<div id="send" style="display:none; font-family:calibri;">
-	  <i>harap salin atau catat kode berikut:</i><br/></font>
-  <div id="code" style="
-	color:#32b5e3;
-	padding:3px;
-	margin:3px;
-	background:#c8f5c8;
-	border-radius: 3px;
-	font-weight:500;
-	text-align:center;
-	"></div>
-  </font>
-  <font size="1dp" color="gray">
-	<br/>
-	<i>lalu tekan tombol berikut:</i><br/>
-    <input type="button" id="js_send" value="SEND CODE" style="display:block; outline:none;
-	  background:#32b5e3;
-	  border:none;
-	  border-radius:40px;
-	  font-weight:700;
-	  color:white;
-	  padding:10px;
-	  width:100%;
-	  " onclick="kirim()" />
-	</div>
 	</div><center>
 	  <i>powered by: <img src="eg.png" style="width:5%"/></i><b>EDU GO</b></center>
   </font>
@@ -113,7 +55,7 @@ overflow:auto;
 
 
 <style>
-#login, #send{
+#login{
 border:1px solid #d3d3d3;
 display:block; 
 background:white; 
@@ -123,7 +65,7 @@ padding:13%;
 font-size:2dp; 
 font-family:calibri;
 }
-#nisn, #nama{
+#nisn{
 outline:none;
 		background:none;
 		border:none;
@@ -136,7 +78,7 @@ font-weight:400;
 		  transition: all .7s ease;
 
 }
-#nama:focus, #nisn:focus{
+#nisn:focus{
 border-bottom:1px solid #32b5e3;
 color:#32b5e3;
 }
@@ -167,44 +109,7 @@ color:white;
 .login:active{
 background:blue;
 }
-input[type=radio   ]:not(old){
-  width     : 2em;
-  margin    : 0;
-  padding   : 0;
-  font-size : 1em;
-  opacity   : 0;
-}
-input[type=radio   ]:not(old) + label{
-  display      : inline-block;
-  margin-left  : -2em;
-  line-height  : 2em;
-  -webkit-transition: all .7s ease;
-		  -moz-transition: all .7s ease;
-		  -o-transition: all .7s ease;  
-		  transition: all .7s ease;
-}
-input[type=radio   ]:not(old) + label > span{
-  display          : inline-block;
-  width            : 0.4em;
-  height           : 0.4em;
-  border-radius    : 100%;
-  margin           : 0.5em 0.5em 0.5em 0.5em;
-  border           : 0.45em solid #ddd;
-  background       : white;
-  vertical-align   : bottom;
-  -webkit-transition: all .7s ease;
-		  -moz-transition: all .7s ease;
-		  -o-transition: all .7s ease;  
-		  transition: all .7s ease;
-}
-input[type=radio   ]:not(old):checked + label > span{
-  background       : white;
-  border           : 0.45em solid #32b5e3;
-  width            : 0.4em;
-  height           : 0.4em;
-  border-radius    : 100%;
-  margin           : 0.5em 0.5em 0.5em 0.5em;
-}
+
 #tbl{
 padding:5px;
 		  border:none;
