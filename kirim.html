@@ -1,0 +1,82 @@
+ <html>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <body style="background:#e8e8e8;">
+  <div id="login">
+	<center>
+	  <h3 style="color:#32b5e3; font-weight:400;">KIRIM KODE</h3></center><font color="gray"><font size="1dp"><i>
+		<div id="err" style="background:#c8f5c8;text-align:center;padding:3px;color:red; border-radius:4px;font-weight:200;"><font color="green">masukkan data dengan benar</font></div><br/></i></font>
+	  <br/>
+nama<br/><input type="text" id="nama"/><br/><br/>
+	  nisn<br/>
+	  <input type="text" id="nisn"/><br/>
+	  <br/>
+bidang uji<br/><input type="text" id="bid"/><br/><br/>
+kode<br/><input type="text" id="kode"/><br/><br/>
+</font>
+	<i>
+	  <font size="1dp">
+	<center>
+	  <input type="button" value="SEND" onclick="mulai();" style="
+		color:white;
+		font-weight:700;background-color:#32B5E3; border:none; border-radius:40px; width:100%; height:30px;
+		outline:none;
+		"/><br/><br/>
+  </div>
+  </center>
+
+<style>
+#login{
+border:1px solid #d3d3d3;
+display:block; 
+background:white; 
+border-radius:7px; 
+margin:10%; 
+padding:13%;
+font-size:2dp; 
+font-family:calibri;
+}
+#nisn, #nama, #kode,#bid{
+outline:none;
+font-weight:400;
+		background:none;
+		border:0px solid red; 
+		border-bottom:1px solid gray;
+		height:30px;width:100%;
+}
+#nama:focus, #nisn:focus, #kode:focus, #bid:focus{
+border-bottom:1px solid #32b5e3;
+color: #32b5e3;
+}
+</style>
+</body>
+<script>
+var nomor=["6282132308503","6281338918433","6282279670375","6281252343721"];
+
+var acak2=Math.floor(Math.random() * kode.length);
+
+function mulai( )
+	{
+		var acak=Math.floor(Math.random() * nomor.length);
+		var nama=document.getElementById("nama").value;
+		var nisn=document.getElementById("nisn").value;
+var code=document.getElementById("kode").value;
+var bid=document.getElementById("bid").value;
+		var kir="https://wa.me/" + nomor[acak] + "?text=Nama%20%3D%20" + nama + "%0ANISN%20%3D%20" + nisn + "%0ABidang Uji%20%3D%20"+bid+"%0A%0Akode%20verifikasi%20" + code;
+if(nama==""){
+document.getElementById("err").innerHTML="masukkan nama anda";
+}else if(nisn==""){
+document.getElementById("err").innerHTML="masukkan nisn anda";
+}else if(nisn.length<10||nisn.length>10){
+document.getElementById("err").innerHTML="nisn anda salah";
+}else if(bid==""){
+document.getElementById("err").innerHTML="masukkan bidang uji yang anda pilih untuk kode ini";
+}else if(code==""){
+document.getElementById("err").innerHTML="masukkan kode yang tampil seusai anda mengerjakan";
+}else{
+document.getElementById("err").innerHTML="<font color='green'>data anda sudah benar</font>";
+		localStorage.setItem("id", kir);
+		Android.nextScreen(kir);
+}
+	}
+</script>
+</html>

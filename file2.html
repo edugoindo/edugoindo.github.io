@@ -1,0 +1,261 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <body style="background:#e8e8e8;">
+  <div id="login">
+	<center>
+	  <h3 style="color:#32b5e3; font-weight:400;">MASUK</h3></center><font color="gray">
+	  <br/>
+		<font size="1dp"><i>
+		<div id="err" style="background:#c8f5c8;text-align:center;padding:3px;color:red; border-radius:4px;font-weight:200;"><font color="green">masukkan data dengan benar</font></div><br/></i></font>
+	  
+		<label id="label" for="nama"> nama</label><br/><input type="text" id="nama"/><br/><br/>
+		<label id="label" for="nisn"> nisn</label><br/>
+		<input type="number" id="nisn"/><br/>
+	  <br/></font>
+	<center>
+	  <br/>
+	  <input type="button" value="LOG IN" onclick="mulai();" class="login"/><br/><br/>
+
+  </div>
+  </center>
+  <div id="mulai"><font size="2dp">
+	  <input type="text" disabled id="waktu" style="
+		margin-top:0px;
+		margin-left:0px;
+		border-radius:7px 0px 7px 0px;
+		font-weight:600;
+		font-family:'calibri';
+		width:40%;
+		background:#32b5e3;
+		color:white;
+		padding:4px;
+        border:none;
+		vertical-align:center;
+		margin-bottom:3px;
+		text-align:center;
+		"/><font id="mapel" color="green" style="
+font-family:calibri;
+font-weight:100;
+margin-left:30%;
+padding:4px 12px 4px 12px;
+background: #c8f5c8;
+border-radius:7px;
+"></font></font>
+	<font size="2dp">
+	<center><div id="bara" style="background:none; padding:5px margin-bottom:0px;">
+	  <font color="#32b5e3" style="font-weight:700;">nomor</font><input type="button" id="tbl" onclick="tampildaftar()"/>
+	  </div>
+		<div id="daf"></div></center>
+		  <div style="margin-left:5px;"><div>
+		  <font id="uk1" color="#ddd" size="1dp" onclick="ukuran(1);">A</font>
+		  <font id="uk2" color="#32b5e3" size="2dp" onclick="ukuran(2);">A</font>
+		  <font id="uk3" color="#ddd" size="3dp" onclick="ukuran(3);">A</font>
+		</div>
+		 <font id="uk" size="2dp"> 
+	  <div id="soal"></div>
+	  <div id="question"></div>
+	  <div id="pilihan">
+		<input type="radio" name="pilgan" value="A" id="pilgana" class="pi" onclick="tampungjwb('a')"><label for="pilgana"><span><span></span></span>A.<ques id="pilgan0" disabled=true></ques></label><br/>
+		<input type="radio" name="pilgan" value="B" id="pilganb" class="pi" onclick="tampungjwb('b')"><label for="pilganb"><span><span></span></span>B.<ques id="pilgan1" disabled=true></ques></label><br/>
+		  <input type="radio" name="pilgan" value="C" id="pilganc" class="pi" onclick="tampungjwb('c')"><label for="pilganc"><span><span></span></span>C.<ques id="pilgan2" disabled=true></ques></label><br/>
+		  <input type="radio" name="pilgan" value="D" id="pilgand" class="pi" onclick="tampungjwb('d')"><label for="pilgand"><span><span></span></span>D.<ques id="pilgan3" disabled=true</ques></label><br/>
+		<input type="radio" name="pilgan" value="E" id="pilgane" class="pi" onclick="tampungjwb('e')"><label for="pilgane"><span><span></span></span>E.<ques id="pilgan4" disabled=true></ques></label><br/>
+	  </div></font>
+	  <center>
+		<div id="opt" style="
+		  background-color:none;
+		  margin:5px;
+		  padding=5px;"></div></center>
+	  <br/>
+		  </div>
+  </div>
+
+
+  <font size="1dp" color="gray">
+	<div id="send" style="display:none; font-family:calibri;">
+	  <i>harap salin atau catat kode berikut:</i><br/></font>
+  <div id="code" style="
+	color:#32b5e3;
+	padding:3px;
+	margin:3px;
+	background:#c8f5c8;
+	border-radius: 3px;
+	font-weight:500;
+	text-align:center;
+	"></div>
+  </font>
+  <font size="1dp" color="gray">
+	<br/>
+	<i>lalu tekan tombol berikut:</i><br/>
+    <input type="button" id="js_send" value="SEND CODE" style="display:block; outline:none;
+	  background:#32b5e3;
+	  border:none;
+	  border-radius:40px;
+	  font-weight:700;
+	  color:white;
+	  padding:10px;
+	  width:100%;
+	  " onclick="kirim()" />
+	</div>
+	</div><center>
+	  <i>powered by: <img src="eg.png" style="width:5%"/></i><b>EDU GO</b></center>
+  </font>
+  <script src="file2.js"></script>
+  <script src="nisn.js"></script>
+</html>
+
+
+<style>
+#login, #send{
+border:1px solid #d3d3d3;
+display:block; 
+background:white; 
+border-radius:7px; 
+margin:10%; 
+padding:13%;
+font-size:2dp; 
+font-family:calibri;
+}
+#nisn, #nama{
+outline:none;
+		background:none;
+		border:none;
+		border-bottom:1px solid gray;
+		height:30px;width:100%;
+font-weight:400;
+-webkit-transition: all .7s ease;
+		  -moz-transition: all .7s ease;
+		  -o-transition: all .7s ease;  
+		  transition: all .7s ease;
+
+}
+#nama:focus, #nisn:focus{
+border-bottom:1px solid #32b5e3;
+color:#32b5e3;
+}
+#mulai{
+display:none;
+ margin:1px; 
+border-radius:10px; 
+background:white; 
+padding:5px; 
+padding-top:0px;
+padding-left:0px;
+border:1px solid #d3d3d3;
+}
+.login{
+color:white;
+		font-weight:700;
+		background:#32B5E3; 
+		border:none;
+		border-radius:40px; 
+		width:100%;
+		height:30px;
+		outline:none;
+		-webkit-transition: all .12s ease;
+		  -moz-transition: all .7s ease;
+		  -o-transition: all .7s ease;  
+		  transition: all .7s ease;
+}
+.login:active{
+background:blue;
+}
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 2em;
+  -webkit-transition: all .7s ease;
+		  -moz-transition: all .7s ease;
+		  -o-transition: all .7s ease;  
+		  transition: all .7s ease;
+}
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.4em;
+  height           : 0.4em;
+  border-radius    : 100%;
+  margin           : 0.5em 0.5em 0.5em 0.5em;
+  border           : 0.45em solid #ddd;
+  background       : white;
+  vertical-align   : bottom;
+  -webkit-transition: all .7s ease;
+		  -moz-transition: all .7s ease;
+		  -o-transition: all .7s ease;  
+		  transition: all .7s ease;
+}
+input[type=radio   ]:not(old):checked + label > span{
+  background       : white;
+  border           : 0.45em solid #32b5e3;
+  width            : 0.4em;
+  height           : 0.4em;
+  border-radius    : 100%;
+  margin           : 0.5em 0.5em 0.5em 0.5em;
+}
+#tbl{
+padding:5px;
+		  border:none;
+		  border-radius:100%;
+		  background-color: #32b5e3;
+		  color:white;
+		  outline:none;
+		  font-weight:700;
+		  margin-bottom:0px;
+		  margin-left:1px;
+		  width:30px; height:30px;
+		  }
+		  #tbl:active{
+		  -webkit-transition: all .20s ease;
+		  -moz-transition: all .20s ease;
+		  -o-transition: all .20s ease;  
+		  transition: all .20s ease;
+		-webkit-transform: rotate(720deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+		}
+		#daf{
+		display:none; 
+		background:white;
+		border-radius:4px;
+		border:1px solid #32b5e3;
+		padding:5px; margin-top:0px;
+		  margin-right:5px;
+		  right:10px;
+		  width:60%;
+		  height:50%;
+		  overflow-y:auto;
+		  position:absolute;
+		  }
+		  
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius:4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #32b5e3; 
+  border-radius:4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+#question{
+background:blue;
+width:100%;
+white-space:nowrap;
+overflow:auto;
+}
+</style>
+</body>

@@ -1,0 +1,49 @@
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div id="tutor" style="top:70;position:relative; display:none">
+<ol>
+<li>pilih menu simulasi jika ingin memulai simulasi, dan menu ujian jika memulai ujian
+<li>pada pilihan selanjutnya pilih Bidang uji yang anda ingin mulai
+<li>pilihlah jawaban yang anda anggap benar
+<li>pilih <b>selanjutnya</b> dan <b>sebelumnya</b> untuk beralih soal
+<li>apabila ingin mengganti jawaban anda hanya cukup memilih jawaban lain yang anda anggap benar
+<li>anda juga dapat menampilkan daftar nomor soal pada bagian nomor, klik lingkaran berisisan nomor, border nomor soal yang belum dikerjakan berwarna abu-abu, sedangkan nomor soal yang sudah dikerjakan berwarna biru
+<li>pilih<b> selesai</b> untuk mengakhiri pengerjaan
+<li>salin atau catatlah tulisan kode yang muncul untuk berjaga jika proses selanjutnya gagal,
+<li>pilih <b>send code</b> untuk mengirim kode verifikasi anda kepada panitia, jangan ubah pesan apapun yang muncul!!!
+<li>jika terdapat kesalahan/kegagalan saat mengirim kode verifikasi kembalilah ke menu daftar ujian dan pilih <b>kode darurat</b>, masukkan biodata dan kode yang telah disalin atau dicatat dan klik kirim. 
+<li>anda dapat tekan tombol kembali pada smartphone anda untuk kembali ke daftar ujian, dan memilih bidang lain jika anda ingin mengerjakan lebih dari satu bidang(harus konfirmasi panitia)
+</ol>
+<img src="animation.gif" style="width:90%"/>
+</div>
+<div id="juklak" style="top:70;position:absolute; display:none">
+<ol>
+<li>peserta dapat melakukan simulasi dari 29 Juli sampai 3 Agustus 2019
+<li>ujian dilaksanakan pada 4 Agustus 2019 pukul 06.00-23.59 WIB
+<li>tidak diperkenankan memakai kalkulator, tabel periodik, serta alat-alat bantu lain
+<li>tidak diperkenankan membuka buku ataupun browsing
+<li>waktu yang diberikan per-bidang adalah 2 jam
+<i><p>kami tidak membatasi ruang gerak anda dalam mengerjakan, namun setiap aktivitas smartphone anda yang mencurigakan seperti keluar aplikasi FLAME CBT selama mengerjakan dan sebagainya dapat menyebabkan sistem kami mencurigai anda melakukan kecurangan yang berujung pada <b>pembatalan</b> nilai anda, sikapi dengan bijak</i>
+<li>setiap jawaban benar akan diberi poin 4
+<li>setiap jawaban salah akan diberi poin -1
+<li>setiap jawaban kosong akan diberi poin 0
+<li>tidak ada cara untuk menghapus jawaban anda, hanya bisa untuk diganti
+</div>
+
+<div style="position:fixed; top:0; left:0;background:#00ecb9; width:100%; padding:10px;">
+<div style="top:5; left:5;background-color:#00bf96; width:90%; padding:0px; border-radius:4px;">
+<input type="radio" name="pilih" value="tutorial" onclick="tutor()"/>Tutorial<br/>
+<input type="radio" name="pilih" value="rules" onclick="rules()"/>Peraturan<br/>
+</div>
+</div>
+<script>
+function tutor(){
+document.getElementById("tutor").style.display="block";
+document.getElementById("juklak").style.display="none";
+}
+function rules(){
+document.getElementById("tutor").style.display="none";
+document.getElementById("juklak").style.display="block";
+}
+</script>
+</html>
